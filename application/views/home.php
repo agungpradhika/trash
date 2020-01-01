@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Startmin - Bootstrap Admin Theme</title>
+        <title>Dashboard</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="<?php echo base_url('assets/startmin/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -19,8 +19,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- MetisMenu CSS -->
         <link href="<?php echo base_url('assets/startmin/css/metisMenu.min.css') ?>" rel="stylesheet">
 
+        <!-- Timeline CSS -->
+        <link href="<?php echo base_url('assets/startmin/css/timeline.css') ?>" rel="stylesheet">
+
         <!-- Custom CSS -->
         <link href="<?php echo base_url('assets/startmin/css/startmin.css') ?>" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="<?php echo base_url('assets/startmin/css/morris.css') ?>" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="<?php echo base_url('assets/startmin/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
@@ -39,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Runtah</a>
+                    <a class="navbar-brand" href="index.html">Startmin</a>
                 </div>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -50,67 +56,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </button>
 
                 <ul class="nav navbar-nav navbar-left navbar-top-links">
-                    <li><a href="<?php echo base_url('page/home') ?>"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
                 </ul>
 
                 <ul class="nav navbar-right navbar-top-links">
-                    <!-- <li class="dropdown navbar-inverse"> -->
-                        <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
-                        </a> -->
-                        <!-- <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="text-center" href="#">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </li> -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i><?php echo $this->session->userdata('nama'); ?> <b class="caret"></b>
+                            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -118,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo base_url('auth/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -128,120 +80,165 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
-                            <li class="sidebar-search">
-                                <div class="input-group custom-search-form">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                                <!-- /input-group -->
+                            <li>
+                                <a href="<?php echo base_url('page/dashboard') ?>" class="active"><i class="fa fa-dashboard fa-fw"></i> Halaman Utama</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('page/dashboard') ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                                <a href="<?php echo base_url('page/laporan') ?>"><i class="fa fa-table fa-fw"></i> Laporan</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>flot.html">Flot Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>morris.html">Morris.js Charts</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url('assets/startmin/pages') ?>tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url('assets/startmin/pages') ?>forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="panels-wells.html">Panels and Wells</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>buttons.html">Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>notifications.html">Notifications</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>typography.html">Typography</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>icons.html"> Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages') ?>grid.html">Grid</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="#">Second Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Second Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level <span class="fa arrow"></span></a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Third Level Item</a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.nav-third-level -->
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li class="active">
-                                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a class="active" href="<?php echo base_url('assets/startmin/pages/blank.html') ?>">Blank Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo base_url('assets/startmin/pages/login.html') ?>">Login Page</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
+                                <a href="#"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
                             </li>
                         </ul>
                     </div>
-                    <!-- /.sidebar-collapse -->
                 </div>
-                <!-- /.navbar-static-side -->
             </nav>
 
-            <!-- Page Content -->
             <div id="page-wrapper">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">Blank</h1>
+                            <h1 class="page-header">STATUS</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="panel panel-yellow">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-trash fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-center">
+                                            <div class="huge" style="font-size: 20px;">STATUS</div>
+                                            <div><b>kapasitas logam</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#"> -->
+                                    <div class="panel-footer">
+                                        <span class="pull-left" style="color: #f0ad4e;">Kapasitas penampung sampah logam</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="panel panel-primary" style="background-color: #428bca">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-center">
+                                            <div class="huge" style="font-size: 20px;">STATUS</div>
+                                            <div><b>kapasitas non logam</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#"> -->
+                                    <div class="panel-footer">
+                                        <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="panel panel-red">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-fire fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-center">
+                                            <div class="huge" style="font-size: 20px;">STATUS</div>
+                                            <div><b>isi gas logam</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#"> -->
+                                    <div class="panel-footer">
+                                        <span class="pull-left" style="color: #d9534f;">Gas pada penampung sampah logam</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-recycle fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-center">
+                                            <div class="huge" style="font-size: 20px;">STATUS</div>
+                                            <div><b>isi Gas non logam</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#"> -->
+                                    <div class="panel-footer">
+                                        <span class="pull-left" style="color: #5cb85c">Gas pada penampung sampah Non logam</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="panel panel-grey" style="background-color: #808080; border-color: #808080; color: #fff;">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-refresh fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-center">
+                                            <div class="huge" style="font-size: 20px;">STATUS</div>
+                                            <div><b>ini isi status pH</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#"> -->
+                                    <div class="panel-footer">
+                                        <span class="pull-left" style="color: #808080;">pH pada penampung sampah Non logam</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+
+                        <div class="col-lg-9 col-md-9">
+                            <div class="panel">
+                                <div>
+                                    tes
+                                    dasds
+                                    dasda
+                                    ddsad
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     <!-- /.row -->
                 </div>
                 <!-- /.container-fluid -->
@@ -259,6 +256,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <!-- Metis Menu Plugin JavaScript -->
         <script src="<?php echo base_url('assets/startmin/js/metisMenu.min.js') ?>"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="<?php echo base_url('assets/startmin/js/raphael.min.js') ?>"></script>
+        <script src="<?php echo base_url('assets/startmin/js/morris.min.js') ?>"></script>
+        <script src="<?php echo base_url('assets/startmin/js/morris-data.js') ?>"></script>
 
         <!-- Custom Theme JavaScript -->
         <script src="<?php echo base_url('assets/startmin/js/startmin.js') ?>"></script>
