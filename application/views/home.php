@@ -87,7 +87,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="<?php echo base_url('page/laporan') ?>"><i class="fa fa-table fa-fw"></i> Laporan</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
+                                <a href="<?php echo base_url('page/lokasi') ?>"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url('page/akun') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
                             </li>
                         </ul>
                     </div>

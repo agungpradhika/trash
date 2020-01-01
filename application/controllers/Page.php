@@ -29,4 +29,9 @@ class Page extends MY_Controller {
     $this->load->view('lokasi');
   }
 
+  public function akun()
+  {
+    $this->load->view('akun');
+  }
+
 }

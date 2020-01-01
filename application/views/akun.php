@@ -99,35 +99,95 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div id="page-wrapper">
                 <div class="container-fluid">
-                    <h1 style="margin-top:4%;"> LAPORAN </h1>
+                    <h1 style="margin-top:4%;"> KELOLA AKUN </h1>
                     <hr>
-                    <div class="form-group">
-                        <label for=""> Tanggal </label>
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <input type="date" name="" id="" class="form-control">
-                            </div>
-                            <div class="col-lg-1">
-                                <button type="button" class="btn btn-primary"> Submit </button>
-                            </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                          <label for=""> Nama Lengkap </label>
+                          <input type="text" name="" id="" class="form-control">
                         </div>
+                        <div class="form-group">
+                          <label for=""> Alamat </label>
+                          <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Jabatan </label>
+                          <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Email </label>
+                          <input type="email" name="" id="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Username </label>
+                          <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Password </label>
+                          <input type="password" name="" id="" class="form-control">
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-primary"> Simpan </button>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-info"> Edit </button>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-warning"> Update </button>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-danger"> Hapus </button>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-default"> Batal </button>
+                          </div>
+                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <table class="table table-bordered table-striped">
+                          <tr>
+                              <th> Heading 1 </th>
+                              <th> Heading 2 </th>
+                              <th> Heading 3 </th>
+                              <th> Heading 4 </th>
+                              <th> Heading 5 </th>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                      </table>
+                      </div>
                     </div>
-                    <table class="table table-bordered table-striped">
-                        <tr>
-                            <th> Heading 1 </th>
-                            <th> Heading 2 </th>
-                            <th> Heading 3 </th>
-                            <th> Heading 4 </th>
-                            <th> Heading 5 </th>
-                        </tr>
-                        <tr>
-                            <td> Value 1 </td>
-                            <td> Value 2 </td>
-                            <td> Value 3 </td>
-                            <td> Value 4 </td>
-                            <td> Value 5 </td>
-                        </tr>
-                    </table>
                 </div>
                 <!-- /.container-fluid -->
             </div>

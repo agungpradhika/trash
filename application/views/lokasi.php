@@ -31,12 +31,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Custom Fonts -->
         <link href="<?php echo base_url('assets/startmin/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
 
+        <!-- open layers -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+          .map {
+            height: 400px;
+            width: 100%;
+          }
+        </style>
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
     </head>
     <body>
 
@@ -99,35 +109,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div id="page-wrapper">
                 <div class="container-fluid">
-                    <h1 style="margin-top:4%;"> LAPORAN </h1>
+                    <h1 style="margin-top:4%;"> LOKASI </h1>
                     <hr>
-                    <div class="form-group">
-                        <label for=""> Tanggal </label>
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <input type="date" name="" id="" class="form-control">
-                            </div>
-                            <div class="col-lg-1">
-                                <button type="button" class="btn btn-primary"> Submit </button>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table table-bordered table-striped">
-                        <tr>
-                            <th> Heading 1 </th>
-                            <th> Heading 2 </th>
-                            <th> Heading 3 </th>
-                            <th> Heading 4 </th>
-                            <th> Heading 5 </th>
-                        </tr>
-                        <tr>
-                            <td> Value 1 </td>
-                            <td> Value 2 </td>
-                            <td> Value 3 </td>
-                            <td> Value 4 </td>
-                            <td> Value 5 </td>
-                        </tr>
-                    </table>
+                    <div id="map" class="map"></div>
                 </div>
                 <!-- /.container-fluid -->
             </div>
@@ -135,6 +119,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
         <!-- /#wrapper -->
+
+        <script type="text/javascript">
+          var map = new ol.Map({
+            target: 'map',
+            layers: [
+              new ol.layer.Tile({
+                source: new ol.source.OSM()
+              })
+            ],
+            view: new ol.View({
+              center: ol.proj.fromLonLat([37.41, 8.82]),
+              zoom: 4
+            })
+          });
+        </script>
 
         <!-- jQuery -->
         <script src="<?php echo base_url('assets/startmin/js/jquery.min.js') ?>"></script>
