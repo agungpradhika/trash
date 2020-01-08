@@ -4,9 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends MY_Controller {
 
+  function __construct()
+  {
+    parent::__construct();
+    $this->load->model('StatusModel');
+    $this->load->helper('url');
+  }
+
+
   public function home()
   {
-    $this->load->view('home');
+    $data['smart_trash'] = $this->StatusModel->tampil_status()->row();
+
+    $this->load->view('dashboard');
   }
 
   public function thanks()
@@ -16,7 +26,9 @@ class Page extends MY_Controller {
 
   public function dashboard()
   {
-  	$this->load->view('dashboard');
+    $data['smart_trash'] = $this->StatusModel->tampil_status()->row();
+    // var_dump($data);exit();
+  	$this->load->view('dashboard',$data);
   }
 
   public function laporan()

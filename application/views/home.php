@@ -230,13 +230,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="col-lg-9 col-md-9">
-                            <div class="panel">
-                                <div>
-                                    tes
-                                    dasds
-                                    dasda
-                                    ddsad
-                                </div>
+                            <div class="panel panel-default" style="height: 850px;">
+                                
                             </div>
                         </div>
                     </div>

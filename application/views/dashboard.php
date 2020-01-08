@@ -65,12 +65,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                            </li>
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="<?php echo base_url('auth/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -119,6 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="col-xs-9 text-center">
                                             <div class="huge" style="font-size: 20px;">STATUS</div>
                                             <div><b>kapasitas logam</b></div>
+                                            <div><b><?php echo $smart_trash->sampah_logam ?></b></div>
                                         </div>
                                     </div>
                                 </div>
@@ -143,6 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="col-xs-9 text-center">
                                             <div class="huge" style="font-size: 20px;">STATUS</div>
                                             <div><b>kapasitas non logam</b></div>
+                                            <div><b><?php echo $smart_trash->sampah_non_logam ?></b></div>
                                         </div>
                                     </div>
                                 </div>
@@ -167,6 +165,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="col-xs-9 text-center">
                                             <div class="huge" style="font-size: 20px;">STATUS</div>
                                             <div><b>isi gas logam</b></div>
+                                            <div><b><?php echo $smart_trash->gas_logam ?></b></div>
                                         </div>
                                     </div>
                                 </div>
@@ -191,6 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="col-xs-9 text-center">
                                             <div class="huge" style="font-size: 20px;">STATUS</div>
                                             <div><b>isi Gas non logam</b></div>
+                                            <div><b><?php echo $smart_trash->gas_non_logam ?></b></div>
                                         </div>
                                     </div>
                                 </div>
@@ -215,6 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <div class="col-xs-9 text-center">
                                             <div class="huge" style="font-size: 20px;">STATUS</div>
                                             <div><b>ini isi status pH</b></div>
+                                            <div><b><?php echo $smart_trash->ph ?></b></div>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +243,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- /.container-fluid -->
             </div>
             <!-- /#page-wrapper -->
-
         </div>
         <!-- /#wrapper -->
 
