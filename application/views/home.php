@@ -232,6 +232,93 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-9 col-md-9">
                             <div class="panel panel-default" style="height: 850px;">
                                 
+                            <div class="panel panel-default" style="padding: 20px;">
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
