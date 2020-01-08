@@ -6,4 +6,16 @@ class UserModel extends CI_Model {
         $result = $this->db->get('users')->row(); // Untuk mengeksekusi dan mengambil data hasil query
         return $result;
     }
+
+    public function profil()
+    {
+    	return $this->db->get('users');
+    	// var_dump($result); exit();
+    }
+
+    public function update($where,$data,$table)
+    {
+    	$this->db->where($where);
+    	$this->db->update($table,$data);
+    }
 }

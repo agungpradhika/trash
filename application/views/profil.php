@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="<?php echo base_url('page/lokasi') ?>"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
                             </li> -->
                             <li>
-                                <a href="<?php echo base_url('page/profil') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
+                                <a href="<?php echo base_url('page/akun') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
                             </li>
                         </ul>
                     </div>
@@ -99,35 +99,98 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div id="page-wrapper">
                 <div class="container-fluid">
-                    <h1 style="margin-top:4%;"> LAPORAN </h1>
+                    <h1 style="margin-top:4%;"> KELOLA AKUN </h1>
                     <hr>
-                    <div class="form-group">
-                        <label for=""> Tanggal </label>
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <input type="date" name="" id="" class="form-control">
-                            </div>
-                            <div class="col-lg-1">
-                                <button type="button" class="btn btn-primary"> Submit </button>
-                            </div>
+                    <form action="<?php echo base_url('page/update'); ?>" method="POST"></form>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                          <label for=""> Nama Lengkap </label>
+                          <input type="text" name="nama" id="" class="form-control" value="<?php echo $profil->nama ?>">
+                          <input type="hidden" name="id" id="" class="form-control" value="<?php echo $profil->id ?>">
                         </div>
+                        <div class="form-group">
+                          <label for=""> Alamat </label>
+                          <textarea name="alamat" id="" cols="30" rows="5" class="form-control"><?php echo "$profil->alamat"; ?></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Jabatan </label>
+                          <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$profil->jabatan"; ?>">
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Email </label>
+                          <input type="email" name="email" id="" class="form-control" value="<?php echo "$profil->email"; ?>">
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Username </label>
+                          <input type="text" name="username" id="" class="form-control" <?php echo "$profil->username"; ?>>
+                        </div>
+                        <div class="form-group">
+                          <label for=""> Password </label>
+                          <input type="password" name="password" id="" class="form-control" <?php echo "$profil->password"; ?>>
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <input type="submit" value="Update">
+                          </div>
+                        </form>
+                          <!-- <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-info"> Edit </button>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-warning"> Update </button>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-danger"> Hapus </button>
+                          </div> -->
+                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
+                            <button class="btn btn-default"> Batal </button>
+                          </div>
+                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <table class="table table-bordered table-striped">
+                          <tr>
+                              <th> Heading 1 </th>
+                              <th> Heading 2 </th>
+                              <th> Heading 3 </th>
+                              <th> Heading 4 </th>
+                              <th> Heading 5 </th>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                          <tr>
+                              <td> Value 1 </td>
+                              <td> Value 2 </td>
+                              <td> Value 3 </td>
+                              <td> Value 4 </td>
+                              <td> Value 5 </td>
+                          </tr>
+                      </table>
+                      </div> -->
                     </div>
-                    <table class="table table-bordered table-striped">
-                        <tr>
-                            <th> Heading 1 </th>
-                            <th> Heading 2 </th>
-                            <th> Heading 3 </th>
-                            <th> Heading 4 </th>
-                            <th> Heading 5 </th>
-                        </tr>
-                        <tr>
-                            <td> Value 1 </td>
-                            <td> Value 2 </td>
-                            <td> Value 3 </td>
-                            <td> Value 4 </td>
-                            <td> Value 5 </td>
-                        </tr>
-                    </table>
                 </div>
                 <!-- /.container-fluid -->
             </div>

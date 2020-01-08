@@ -77,16 +77,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
-                                <a href="<?php echo base_url('page/dashboard') ?>" class="active"><i class="fa fa-dashboard fa-fw"></i> Halaman Utama</a>
+                                <a href="<?php echo base_url('page/home') ?>" class="active"><i class="fa fa-dashboard fa-fw"></i> Halaman Utama</a>
                             </li>
                             <li>
                                 <a href="<?php echo base_url('page/laporan') ?>"><i class="fa fa-table fa-fw"></i> Laporan</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="<?php echo base_url('page/lokasi') ?>"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
-                            </li>
+                            </li> -->
                             <li>
-                                <a href="<?php echo base_url('page/akun') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
+                                <a href="<?php echo base_url('page/profil') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
                             </li>
                         </ul>
                     </div>
@@ -235,6 +235,98 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 
                             </div>
                         </div>
+
+                        <div class="col-lg-9 col-md-9">
+                            <div class="panel panel-default" style="padding: 20px;">
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                    </div>
+                                                    <div class="col-xs-9 text-center">
+                                                        <div class="huge" style="font-size: 20px;">STATUS</div>
+                                                        <div><b>kapasitas non logam</b></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="#"> -->
+                                                <div class="panel-footer">
+                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            <!-- </a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     

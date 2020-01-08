@@ -65,10 +65,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            <!-- <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                             </li>
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                            </li>
+                            </li> -->
                             <li class="divider"></li>
                             <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
@@ -81,16 +81,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
-                                <a href="<?php echo base_url('page/dashboard') ?>" class="active"><i class="fa fa-dashboard fa-fw"></i> Halaman Utama</a>
+                                <a href="<?php echo base_url('page/home') ?>" class="active"><i class="fa fa-dashboard fa-fw"></i> Halaman Utama</a>
                             </li>
                             <li>
                                 <a href="<?php echo base_url('page/laporan') ?>"><i class="fa fa-table fa-fw"></i> Laporan</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="<?php echo base_url('page/lokasi') ?>"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
-                            </li>
+                            </li> -->
                             <li>
-                                <a href="<?php echo base_url('page/akun') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
+                                <a href="<?php echo base_url('page/profil') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
                             </li>
                         </ul>
                     </div>

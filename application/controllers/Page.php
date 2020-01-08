@@ -8,6 +8,7 @@ class Page extends MY_Controller {
   {
     parent::__construct();
     $this->load->model('StatusModel');
+    $this->load->model('UserModel');
     $this->load->helper('url');
   }
 
@@ -15,8 +16,8 @@ class Page extends MY_Controller {
   public function home()
   {
     $data['smart_trash'] = $this->StatusModel->tampil_status()->row();
-
-    $this->load->view('dashboard');
+    // var_dump($data); exit();
+    $this->load->view('home',$data);
   }
 
   public function thanks()
@@ -28,7 +29,7 @@ class Page extends MY_Controller {
   {
     $data['smart_trash'] = $this->StatusModel->tampil_status()->row();
     // var_dump($data);exit();
-  	$this->load->view('dashboard',$data);
+  	$this->load->view('home',$data);
   }
 
   public function laporan()
@@ -44,6 +45,40 @@ class Page extends MY_Controller {
   public function akun()
   {
     $this->load->view('akun');
+  }
+
+  public function profil()
+  {
+    $data['profil'] = $this->UserModel->profil()->row();
+    // var_dump($data); exit();
+    $this->load->view('profil', $data);
+  }
+
+  public function update($id)
+  {
+      $id = $this->input->post('id');
+      $nama = $this->input->post('nama');
+      $alamat = $this->input->post('alamat');
+      $jabatan = $this->input->post('jabatan');
+      $email = $this->input->post('email');
+      $username = $this->input->post('username');
+      $password = md5($this->input->post('password'));
+
+      $data = array(
+        'nama' => $nama,
+        'alamat' => $alamat,
+        'jabatan' => $jabatan,
+        'email' => $email,
+        'username' => $username,
+        'password' => $password
+      );
+
+      $where = array(
+        'id' => $id
+      );
+
+      $this->UserModel->update($where,$data,'users');
+      redirect ('page/profil');
   }
 
 }
