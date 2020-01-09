@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li> -->
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="<?php echo base_url('auth/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="<?php echo base_url('page/lokasi') ?>"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
                             </li> -->
                             <li>
-                                <a href="<?php echo base_url('page/profil') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
+                                <a href="<?php echo base_url('page/akun') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
                             </li>
                         </ul>
                     </div>
@@ -100,94 +100,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div id="page-wrapper">
                 <div class="container-fluid">
                     <h1 style="margin-top:4%;"> KELOLA AKUN </h1>
+
                     <hr>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="form-group">
-                          <label for=""> Nama Lengkap </label>
-                          <input type="text" name="" id="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Alamat </label>
-                          <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Jabatan </label>
-                          <input type="text" name="" id="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Email </label>
-                          <input type="email" name="" id="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Username </label>
-                          <input type="text" name="" id="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Password </label>
-                          <input type="password" name="" id="" class="form-control">
-                        </div>
-                        <hr>
-                        <div class="row">
-                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-primary"> Simpan </button>
-                          </div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-info"> Edit </button>
-                          </div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-warning"> Update </button>
-                          </div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-danger"> Hapus </button>
-                          </div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-default"> Batal </button>
-                          </div>
-                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <table class="table table-bordered table-striped">
-                          <tr>
-                              <th> Heading 1 </th>
-                              <th> Heading 2 </th>
-                              <th> Heading 3 </th>
-                              <th> Heading 4 </th>
-                              <th> Heading 5 </th>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                      </table>
-                      </div>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <h3>Nama Lengkap</h3>
                     </div>
+                    <div class="col-md-8">
+                      <h3>: <?php echo $akun->nama; ?> </h3>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-2">
+                      <h3>Alamat</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>: <?php echo $akun->alamat; ?> </h3>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-2">
+                      <h3>Jabatan</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>: <?php echo $akun->jabatan; ?> </h3>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-2">
+                      <h3>Email</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>: <?php echo $akun->email; ?> </h3>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-2">
+                      <h3>Username</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>: <?php echo $akun->username; ?> </h3>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                          <hr>
+                          <div class="text-left">
+                            <a href="edit_akun/">
+                              <button type="submit" class="btn btn-primary">Edit</button>
+                            </a>
+                          </div>
+                      </div>
+
+
                 </div>
                 <!-- /.container-fluid -->
             </div>

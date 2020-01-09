@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li> -->
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="<?php echo base_url('auth/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -101,95 +101,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="container-fluid">
                     <h1 style="margin-top:4%;"> KELOLA AKUN </h1>
                     <hr>
-                    <form action="<?php echo base_url('page/update'); ?>" method="POST"></form>
+                    
                     <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="form-group">
-                          <label for=""> Nama Lengkap </label>
-                          <input type="text" name="nama" id="" class="form-control" value="<?php echo $profil->nama ?>">
-                          <input type="hidden" name="id" id="" class="form-control" value="<?php echo $profil->id ?>">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Alamat </label>
-                          <textarea name="alamat" id="" cols="30" rows="5" class="form-control"><?php echo "$profil->alamat"; ?></textarea>
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Jabatan </label>
-                          <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$profil->jabatan"; ?>">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Email </label>
-                          <input type="email" name="email" id="" class="form-control" value="<?php echo "$profil->email"; ?>">
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Username </label>
-                          <input type="text" name="username" id="" class="form-control" <?php echo "$profil->username"; ?>>
-                        </div>
-                        <div class="form-group">
-                          <label for=""> Password </label>
-                          <input type="password" name="password" id="" class="form-control" <?php echo "$profil->password"; ?>>
-                        </div>
-                        <hr>
-                        <div class="row">
-                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <input type="submit" value="Update">
+                      <form action="<?php echo base_url('Page/update'); ?>" method="POST">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                          <div class="form-group">
+                            <label for=""> Nama Lengkap </label>
+                            <input type="text" name="nama" id="" class="form-control" value="<?php echo $profil->nama ?>">
+                            <input type="hidden" name="id" id="" class="form-control" value="<?php echo $profil->id ?>">
                           </div>
-                        </form>
-                          <!-- <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-info"> Edit </button>
+                          <div class="form-group">
+                            <label for=""> Alamat </label>
+                            <textarea name="alamat" id="" cols="30" rows="5" class="form-control"><?php echo "$profil->alamat"; ?></textarea>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-warning"> Update </button>
+                          <div class="form-group">
+                            <label for=""> Jabatan </label>
+                            <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$profil->jabatan"; ?>">
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-danger"> Hapus </button>
-                          </div> -->
-                          <div class="col-lg-2 col-md-2 col-sm-12 col-12">
-                            <button class="btn btn-default"> Batal </button>
+                          <div class="form-group">
+                            <label for=""> Email </label>
+                            <input type="email" name="email" id="" class="form-control" value="<?php echo "$profil->email"; ?>">
                           </div>
-                          <div class="col-lg-1 col-md-1 col-sm-12 col-12"></div>
-                        </div>
+                          <div class="form-group">
+                            <label for=""> Username </label>
+                            <input type="text" name="username" id="" class="form-control" <?php echo "$profil->username"; ?>>
+                          </div>
+                          <div class="form-group">
+                            <label for=""> Password </label>
+                            <input type="password" name="password" id="" class="form-control" <?php echo "$profil->password"; ?>>
+                          </div>
+                          <div class="form-group">
+                          <hr>
+                          <div class="text-left">
+                              <button type="submit" class="btn btn-primary">Simpan</button>
+                          </div>
                       </div>
-                      <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                        <table class="table table-bordered table-striped">
-                          <tr>
-                              <th> Heading 1 </th>
-                              <th> Heading 2 </th>
-                              <th> Heading 3 </th>
-                              <th> Heading 4 </th>
-                              <th> Heading 5 </th>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                          <tr>
-                              <td> Value 1 </td>
-                              <td> Value 2 </td>
-                              <td> Value 3 </td>
-                              <td> Value 4 </td>
-                              <td> Value 5 </td>
-                          </tr>
-                      </table>
-                      </div> -->
+                    </form>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

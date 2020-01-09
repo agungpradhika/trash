@@ -44,10 +44,11 @@ class Page extends MY_Controller {
 
   public function akun()
   {
-    $this->load->view('akun');
+    $data['akun'] = $this->UserModel->profil()->row();
+    $this->load->view('akun', $data);
   }
 
-  public function profil()
+  public function edit_akun()
   {
     $data['profil'] = $this->UserModel->profil()->row();
     // var_dump($data); exit();
@@ -78,7 +79,7 @@ class Page extends MY_Controller {
       );
 
       $this->UserModel->update($where,$data,'users');
-      redirect ('page/profil');
+      redirect ('page/akun');
   }
 
 }

@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li> -->
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="<?php echo base_url('auth/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="<?php echo base_url('page/lokasi') ?>"><i class="fa fa-edit fa-fw"></i> Lokasi</a>
                             </li> -->
                             <li>
-                                <a href="<?php echo base_url('page/profil') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
+                                <a href="<?php echo base_url('page/akun') ?>"><i class="fa fa-table fa-fw"></i> Kelola Akun </a>
                             </li>
                         </ul>
                     </div>
