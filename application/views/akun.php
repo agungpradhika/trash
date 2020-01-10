@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <hr>
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <h3>Nama Lengkap</h3>
                     </div>
                     <div class="col-md-8">
@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
 
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <h3>Alamat</h3>
                     </div>
                     <div class="col-md-8">
@@ -121,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
 
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <h3>Jabatan</h3>
                     </div>
                     <div class="col-md-8">
@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
 
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <h3>Email</h3>
                     </div>
                     <div class="col-md-8">
@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
 
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <h3>Username</h3>
                     </div>
                     <div class="col-md-8">

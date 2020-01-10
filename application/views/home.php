@@ -238,11 +238,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="panel panel-default" style="padding: 20px;">
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                        <div class="panel panel-yellow" style="background-color: #428bca">
                                             <div class="panel-heading">
                                                 <div class="row">
                                                     <div class="col-xs-3">
-                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                        <i class="fa fa-trash fa-5x"></i>
                                                     </div>
                                                     <div class="col-xs-9 text-center">
                                                         <div class="huge" style="font-size: 20px;">STATUS</div>
@@ -262,14 +262,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </div>
                                             <!-- <a href="#"> -->
                                                 <div class="panel-footer">
-                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah logam</span>
+                                                    <span class="pull-left" style="color: #f0ad4e;">Kapasitas penampung sampah logam</span>
                                                     <div class="clearfix"></div>
                                                 </div>
                                             <!-- </a> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                        <div class="panel panel-primary" style="background-color: #428bca">
                                             <div class="panel-heading">
                                                 <div class="row">
                                                     <div class="col-xs-3">
@@ -300,19 +300,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                        <div class="panel panel-red" style="background-color: #428bca">
                                             <div class="panel-heading">
                                                 <div class="row">
                                                     <div class="col-xs-3">
-                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                        <i class="fa fa-fire fa-5x"></i>
                                                     </div>
                                                     <div class="col-xs-9 text-center">
                                                         <div class="huge" style="font-size: 20px;">STATUS</div>
-                                                        <div><b>kapasitas non logam</b></div>
+                                                        <div><b>isi gas logam</b></div>
                                                         <div><?php
                                                         if($smart_trash->gas_logam > 250)
                                                         {
-                                                            echo "<b style='color:red;'>Gas Berbahaya</b>";
+                                                            echo "<b style='color:yellow;'>Gas Berbahaya</b>";
                                                         }
                                                         else
                                                         {
@@ -324,26 +324,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </div>
                                             <!-- <a href="#"> -->
                                                 <div class="panel-footer">
-                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <span class="pull-left" style="color: #d9534f;">Gas penampung sampah logam</span>
                                                     <div class="clearfix"></div>
                                                 </div>
                                             <!-- </a> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                        <div class="panel panel-grey" style="background-color: #428bca">
+                                        <div class="panel panel-green" style="background-color: #428bca">
                                             <div class="panel-heading">
                                                 <div class="row">
                                                     <div class="col-xs-3">
-                                                        <i class="fa fa-fire-extinguisher fa-5x"></i>
+                                                        <i class="fa fa-recycle fa-5x"></i>
                                                     </div>
                                                     <div class="col-xs-9 text-center">
                                                         <div class="huge" style="font-size: 20px;">STATUS</div>
-                                                        <div><b>kapasitas non logam</b></div>
+                                                        <div><b>isi gas non logam</b></div>
                                                         <div><?php
                                                         if($smart_trash->gas_non_logam > 250)
                                                         {
-                                                            echo "<b style='color:red;'>Gas Berbahaya</b>";
+                                                            echo "<b style='color:yellow;'>Gas Berbahaya</b>";
                                                         }
                                                         else
                                                         {
@@ -355,7 +355,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </div>
                                             <!-- <a href="#"> -->
                                                 <div class="panel-footer">
-                                                    <span class="pull-left" style="color: #428bca">Kapasitas penampung sampah Non logam</span>
+                                                    <span class="pull-left" style="color: #5cb85c">Gas penampung sampah Non logam</span>
                                                     <div class="clearfix"></div>
                                                 </div>
                                             <!-- </a> -->
