@@ -105,20 +105,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <label for=""> Tanggal </label>
                         <div class="row">
                             <div class="col-lg-3">
-                                <input type="date" name="" id="" class="form-control">
+                                <input type="date" name="date" id="" class="form-control">
                             </div>
                             <div class="col-lg-1">
                                 <button type="button" class="btn btn-primary"> Submit </button>
                             </div>
                         </div>
                     </div>
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped text-center" >
                         <tr>
-                            <th> Heading 1 </th>
-                            <th> Heading 2 </th>
-                            <th> Heading 3 </th>
-                            <th> Heading 4 </th>
-                            <th> Heading 5 </th>
+                            <th class="text-center"> Kapasitas Logam </th>
+                            <th class="text-center"> Kapasitas Non Logam </th>
+                            <th class="text-center"> Isi Gas Logam </th>
+                            <th class="text-center"> Isi Gas Non Logam </th>
+                            <th class="text-center"> Tanggal </th>
                         </tr>
                         <tr>
                             <td> Value 1 </td>
