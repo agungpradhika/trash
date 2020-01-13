@@ -121,12 +121,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <th class="text-center"> Tanggal </th>
                         </tr>
                         <tr>
-                            <td> Value 1 </td>
+                            <?php foreach ($data as $d) { ?>
+                                
+                            <td> <?php echo $d->sampah_logam; ?>  </td>
                             <td> Value 2 </td>
                             <td> Value 3 </td>
                             <td> Value 4 </td>
                             <td> Value 5 </td>
                         </tr>
+                        <?php ?> ?>
                     </table>
                 </div>
                 <!-- /.container-fluid -->

@@ -6,4 +6,9 @@ class StatusModel extends CI_Model {
         $this->db->order_by('id','desc');
         return $this->db->get('smart_trash');
     }
+
+    public function laporan()
+    {
+    	return $this->db->get('smart_trash');
+    }
 }

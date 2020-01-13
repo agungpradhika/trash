@@ -82,4 +82,12 @@ class Page extends MY_Controller {
       redirect ('page/akun');
   }
 
+  // public function laporan()
+  // {
+  //   $data['data'] = $this->StatusModel->laporan()->row();
+  //   var_dump($data); exit();
+  //   // var_dump($data);exit();
+  //   $this->load->view('laporan',$data);
+  // }
+
 }

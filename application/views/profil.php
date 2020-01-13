@@ -107,28 +107,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <div class="form-group">
                             <label for=""> Nama Lengkap </label>
-                            <input type="text" name="nama" id="" class="form-control" value="<?php echo $profil->nama ?>">
+                            <input type="text" name="nama" id="" class="form-control" value="<?php echo $profil->nama ?>" required>
                             <input type="hidden" name="id" id="" class="form-control" value="<?php echo $profil->id ?>">
                           </div>
                           <div class="form-group">
                             <label for=""> Alamat </label>
-                            <textarea name="alamat" id="" cols="30" rows="5" class="form-control"><?php echo "$profil->alamat"; ?></textarea>
+                            <textarea name="alamat" id="" cols="30" rows="5" class="form-control" required><?php echo "$profil->alamat";?></textarea>
                           </div>
                           <div class="form-group">
                             <label for=""> Jabatan </label>
-                            <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$profil->jabatan"; ?>">
+                            <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$profil->jabatan"; ?>" required>
                           </div>
                           <div class="form-group">
                             <label for=""> Email </label>
-                            <input type="email" name="email" id="" class="form-control" value="<?php echo "$profil->email"; ?>">
+                            <input type="email" name="email" id="" class="form-control" value="<?php echo "$profil->email"; ?>" required>
                           </div>
                           <div class="form-group">
                             <label for=""> Username </label>
-                            <input type="text" name="username" id="" class="form-control" <?php echo "$profil->username"; ?>>
+                            <input type="text" name="username" id="" class="form-control" value="<?php echo "$profil->username"; ?>" required>
                           </div>
                           <div class="form-group">
                             <label for=""> Password </label>
-                            <input type="password" name="password" id="" class="form-control" <?php echo "$profil->password"; ?>>
+                            <input type="password" name="password" id="" class="form-control" value="<?php echo "$profil->password"; ?>" required>
                           </div>
                           <div class="form-group">
                           <hr>
