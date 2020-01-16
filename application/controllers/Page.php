@@ -38,20 +38,22 @@ class Page extends MY_Controller {
     $this->load->view('lokasi');
   }
 
+  // menampilkan data
   public function akun()
   {
-    $data['akun'] = $this->UserModel->profil()->row();
+    $data['akun'] = $this->UserModel->profil()->result();
     $this->load->view('akun', $data);
   }
 
-  public function edit_akun()
+  // klik edit
+  public function edit($id)
   {
-    $data['profil'] = $this->UserModel->profil()->row();
-    // var_dump($data); exit();
-    $this->load->view('profil', $data);
+    $where = array('id' => $id);
+    $data['user'] = $this->UserModel->edit($where,'users')->result();
+    $this->load->view('profil',$data);
   }
 
-  public function update($id)
+  public function update()
   {
       $id = $this->input->post('id');
       $nama = $this->input->post('nama');
@@ -88,7 +90,7 @@ class Page extends MY_Controller {
 
   public function tanggal()
   {
-    var_dump($koneksi); exit();
+    // var_dump($conn); exit();
     if (isset($_GET['tanggal'])) {
       $tgl = $_GET['tanggal'];
       $sql = $this->db->where('tanggal',$tgl);

@@ -103,32 +103,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <hr>
                     
                     <div class="row">
-                      <form action="<?php echo base_url('Page/update'); ?>" method="POST">
+                      <form action="<?php echo base_url('Page/update'); ?>" method="post">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <div class="form-group">
+                            <?php foreach($user as $u) 
+                            { ?>
                             <label for=""> Nama Lengkap </label>
-                            <input type="text" name="nama" id="" class="form-control" value="<?php echo $profil->nama ?>" required>
-                            <input type="hidden" name="id" id="" class="form-control" value="<?php echo $profil->id ?>">
+                            <input type="text" name="nama" id="" class="form-control" value="<?php echo $u->nama ?>" required>
+                            <input type="hidden" name="id" id="" class="form-control" value="<?php echo $u->id ?>">
                           </div>
                           <div class="form-group">
                             <label for=""> Alamat </label>
-                            <textarea name="alamat" id="" cols="30" rows="5" class="form-control" required><?php echo "$profil->alamat";?></textarea>
+                            <textarea name="alamat" id="" cols="30" rows="5" class="form-control" required><?php echo "$u->alamat";?></textarea>
                           </div>
                           <div class="form-group">
                             <label for=""> Jabatan </label>
-                            <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$profil->jabatan"; ?>" required>
+                            <input type="text" name="jabatan" id="" class="form-control" value="<?php echo "$u->jabatan"; ?>" required>
                           </div>
                           <div class="form-group">
                             <label for=""> Email </label>
-                            <input type="email" name="email" id="" class="form-control" value="<?php echo "$profil->email"; ?>" required>
+                            <input type="email" name="email" id="" class="form-control" value="<?php echo "$u->email"; ?>" required>
                           </div>
                           <div class="form-group">
                             <label for=""> Username </label>
-                            <input type="text" name="username" id="" class="form-control" value="<?php echo "$profil->username"; ?>" required>
+                            <input type="text" name="username" id="" class="form-control" value="<?php echo "$u->username"; ?>" required>
                           </div>
                           <div class="form-group">
                             <label for=""> Password </label>
-                            <input type="password" name="password" id="" class="form-control" value="<?php echo "$profil->password"; ?>" required>
+                            <input type="password" name="password" id="" class="form-control" value="<?php echo "$u->password"; ?>" required>
                           </div>
                           <div class="form-group">
                           <hr>
@@ -142,6 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- /.container-fluid -->
             </div>
             <!-- /#page-wrapper -->
+        <?php } ?>
 
         </div>
         <!-- /#wrapper -->

@@ -1,5 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
+include 'conn.php';
  ?>
 
  <!DOCTYPE html>
@@ -106,10 +107,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <label for=""> Tanggal </label>
                         <div class="row">
                             <div class="col-lg-3">
-                                <input type="date" name="date" id="" class="form-control">
+                                <input type="date" name="tanggal" id="" class="form-control">
                             </div>
                             <div class="col-lg-1">
-                                <button type="button" class="btn btn-primary"> Submit </button>
+                                <button type="submit" class="btn btn-primary"> Submit </button>
                             </div>
                         </div>
                     </div>
@@ -123,13 +124,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <th class="text-center"> Tanggal </th>
                         </tr>
                         <tr>
-                            <?php foreach ($data as $d) { ?>
+
+                            <?php if(isset($_GET['tanggal'])){
+                                $tgl = $_GET['tanggal'];
+                                $sql = mysqli_query($conn, "SELECT * from smart_trash where tanggal='$tgl'");
+                            }else{
+                                $sql = mysqli_query($conn,"SELECT * FROM smart_trash");
+                            }
+
+                            while($data = mysqli_fetch_array($sql)){
+                             ?>
                                 
-                            <td> <?php echo $d->sampah_logam ?>  </td>
-                            <td> <?php echo $d->sampah_non_logam ?> </td>
-                            <td> <?php echo $d->gas_logam ?> </td>
-                            <td> <?php echo $d->gas_non_logam ?> </td>
-                            <td> <?php echo $d->tanggal ?> </td>
+                            <td> <?php echo $data['sampah_logam']; ?>  </td>
+                            <td> <?php echo $data['sampah_non_logam']; ?> </td>
+                            <td> <?php echo $data['gas_logam']; ?> </td>
+                            <td> <?php echo $data['gas_non_logam']; ?> </td>
+                            <td> <?php echo $data['tanggal']; ?> </td>
                         </tr>
                         <?php } ?>
                     </table>

@@ -101,13 +101,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="container-fluid">
                     <h1 style="margin-top:4%;"> KELOLA AKUN </h1>
 
+                    <?php foreach($akun as $a) {
+                     ?>
                     <hr>
                   <div class="row">
                     <div class="col-md-3">
                       <h3>Nama Lengkap</h3>
                     </div>
                     <div class="col-md-8">
-                      <h3>: <?php echo $akun->nama; ?> </h3>
+                      <h3>: <?php echo $a->nama; ?> </h3>
                     </div>
                   </div>
 
@@ -116,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <h3>Alamat</h3>
                     </div>
                     <div class="col-md-8">
-                      <h3>: <?php echo $akun->alamat; ?> </h3>
+                      <h3>: <?php echo $a->alamat; ?> </h3>
                     </div>
                   </div>
 
@@ -125,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <h3>Jabatan</h3>
                     </div>
                     <div class="col-md-8">
-                      <h3>: <?php echo $akun->jabatan; ?> </h3>
+                      <h3>: <?php echo $a->jabatan; ?> </h3>
                     </div>
                   </div>
 
@@ -134,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <h3>Email</h3>
                     </div>
                     <div class="col-md-8">
-                      <h3>: <?php echo $akun->email; ?> </h3>
+                      <h3>: <?php echo $a->email; ?> </h3>
                     </div>
                   </div>
 
@@ -143,19 +145,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <h3>Username</h3>
                     </div>
                     <div class="col-md-8">
-                      <h3>: <?php echo $akun->username; ?> </h3>
+                      <h3>: <?php echo $a->username; ?> </h3>
                     </div>
                   </div>
+
+              
 
                   <div class="form-group">
                           <hr>
                           <div class="text-left">
-                            <a href="edit_akun/">
+                            <a href="<?php echo site_url('Page/edit/'.$a->id) ?>">
                               <button type="submit" class="btn btn-primary">Edit</button>
                             </a>
                           </div>
                       </div>
-
+<?php } ?>
 
                 </div>
                 <!-- /.container-fluid -->
