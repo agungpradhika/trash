@@ -101,6 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="container-fluid">
                     <h1 style="margin-top:4%;"> LAPORAN </h1>
                     <hr>
+                    <form action="<?php echo base_url('Page/tanggal') ?>" method="get">
                     <div class="form-group">
                         <label for=""> Tanggal </label>
                         <div class="row">
@@ -112,6 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                     </div>
+                </form>
                     <table class="table table-bordered table-striped text-center" >
                         <tr>
                             <th class="text-center"> Kapasitas Logam </th>
@@ -123,13 +125,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <tr>
                             <?php foreach ($data as $d) { ?>
                                 
-                            <td> <?php echo $d->sampah_logam; ?>  </td>
-                            <td> Value 2 </td>
-                            <td> Value 3 </td>
-                            <td> Value 4 </td>
-                            <td> Value 5 </td>
+                            <td> <?php echo $d->sampah_logam ?>  </td>
+                            <td> <?php echo $d->sampah_non_logam ?> </td>
+                            <td> <?php echo $d->gas_logam ?> </td>
+                            <td> <?php echo $d->gas_non_logam ?> </td>
+                            <td> <?php echo $d->tanggal ?> </td>
                         </tr>
-                        <?php ?> ?>
+                        <?php } ?>
                     </table>
                 </div>
                 <!-- /.container-fluid -->

@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+// include 'koneksi.php';
 
 
 class Page extends MY_Controller {
@@ -30,11 +31,6 @@ class Page extends MY_Controller {
     $data['smart_trash'] = $this->StatusModel->tampil_status()->row();
     // var_dump($data);exit();
   	$this->load->view('home',$data);
-  }
-
-  public function laporan()
-  {
-    $this->load->view('laporan');
   }
 
   public function lokasi()
@@ -82,12 +78,22 @@ class Page extends MY_Controller {
       redirect ('page/akun');
   }
 
-  // public function laporan()
-  // {
-  //   $data['data'] = $this->StatusModel->laporan()->row();
-  //   var_dump($data); exit();
-  //   // var_dump($data);exit();
-  //   $this->load->view('laporan',$data);
-  // }
+  public function laporan()
+  {
+    $data['data'] = $this->StatusModel->laporan()->result();
+    // var_dump($data); exit();
+    // var_dump($data);exit();
+    $this->load->view('laporan',$data);
+  }
+
+  public function tanggal()
+  {
+    var_dump($koneksi); exit();
+    if (isset($_GET['tanggal'])) {
+      $tgl = $_GET['tanggal'];
+      $sql = $this->db->where('tanggal',$tgl);
+      $this->load->view('laporan',$sql);
+    }
+  }
 
 }
